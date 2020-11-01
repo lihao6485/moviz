@@ -15,6 +15,7 @@
 		F6C5AA4A254D947B00F6B85F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C5AA48254D947B00F6B85F /* LaunchScreen.storyboard */; };
 		F6C5AA55254D947C00F6B85F /* MovizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C5AA54254D947C00F6B85F /* MovizTests.swift */; };
 		F6C5AA60254D947C00F6B85F /* MovizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C5AA5F254D947C00F6B85F /* MovizUITests.swift */; };
+		F6C5AA77254EE47900F6B85F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C5AA76254EE47900F6B85F /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		F6C5AA5B254D947C00F6B85F /* MovizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovizUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C5AA5F254D947C00F6B85F /* MovizUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovizUITests.swift; sourceTree = "<group>"; };
 		F6C5AA61254D947C00F6B85F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6C5AA76254EE47900F6B85F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6C5AA77254EE47900F6B85F /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +86,7 @@
 				F6C5AA53254D947C00F6B85F /* MovizTests */,
 				F6C5AA5E254D947C00F6B85F /* MovizUITests */,
 				F6C5AA3B254D947800F6B85F /* Products */,
+				F6C5AA75254EE47900F6B85F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +132,14 @@
 			path = MovizUITests;
 			sourceTree = "<group>";
 		};
+		F6C5AA75254EE47900F6B85F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6C5AA76254EE47900F6B85F /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +150,7 @@
 				F6C5AA36254D947800F6B85F /* Sources */,
 				F6C5AA37254D947800F6B85F /* Frameworks */,
 				F6C5AA38254D947800F6B85F /* Resources */,
+				F6DBCBF5254EE6F1005EC152 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -251,6 +264,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F6DBCBF5254EE6F1005EC152 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F6C5AA36254D947800F6B85F /* Sources */ = {
@@ -437,6 +473,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R737Q59B7G;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Moviz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,6 +496,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R737Q59B7G;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Moviz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

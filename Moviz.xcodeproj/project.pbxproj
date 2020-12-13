@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F609D13E257CD7520060049C /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F609D13A257CD7520060049C /* RxRelay.framework */; };
+		F609D13F257CD7520060049C /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F609D13B257CD7520060049C /* RxCocoa.framework */; };
+		F609D140257CD7520060049C /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F609D13C257CD7520060049C /* RxSwift.framework */; };
+		F609D141257CD7520060049C /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F609D13D257CD7520060049C /* RxAlamofire.framework */; };
+		F609D147257CD8C10060049C /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F609D146257CD8C10060049C /* MovieList.swift */; };
+		F6298427256E982C00CA23F9 /* DiscoverRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6298426256E982C00CA23F9 /* DiscoverRouter.swift */; };
+		F629842C256EA04600CA23F9 /* DiscoverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F629842B256EA04600CA23F9 /* DiscoverService.swift */; };
 		F6C5AA3E254D947800F6B85F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C5AA3D254D947800F6B85F /* AppDelegate.swift */; };
 		F6C5AA40254D947800F6B85F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C5AA3F254D947800F6B85F /* SceneDelegate.swift */; };
 		F6C5AA42254D947800F6B85F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C5AA41254D947800F6B85F /* ViewController.swift */; };
-		F6C5AA45254D947800F6B85F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C5AA43254D947800F6B85F /* Main.storyboard */; };
 		F6C5AA47254D947B00F6B85F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6C5AA46254D947B00F6B85F /* Assets.xcassets */; };
 		F6C5AA4A254D947B00F6B85F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C5AA48254D947B00F6B85F /* LaunchScreen.storyboard */; };
 		F6C5AA55254D947C00F6B85F /* MovizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C5AA54254D947C00F6B85F /* MovizTests.swift */; };
@@ -36,11 +42,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F609D13A257CD7520060049C /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		F609D13B257CD7520060049C /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		F609D13C257CD7520060049C /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		F609D13D257CD7520060049C /* RxAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAlamofire.framework; path = Carthage/Build/iOS/RxAlamofire.framework; sourceTree = "<group>"; };
+		F609D146257CD8C10060049C /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
+		F6298426256E982C00CA23F9 /* DiscoverRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverRouter.swift; sourceTree = "<group>"; };
+		F629842B256EA04600CA23F9 /* DiscoverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverService.swift; sourceTree = "<group>"; };
 		F6C5AA3A254D947800F6B85F /* Moviz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moviz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C5AA3D254D947800F6B85F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6C5AA3F254D947800F6B85F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F6C5AA41254D947800F6B85F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F6C5AA44254D947800F6B85F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6C5AA46254D947B00F6B85F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6C5AA49254D947B00F6B85F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6C5AA4B254D947B00F6B85F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +71,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6C5AA77254EE47900F6B85F /* Alamofire.framework in Frameworks */,
+				F609D13E257CD7520060049C /* RxRelay.framework in Frameworks */,
+				F609D13F257CD7520060049C /* RxCocoa.framework in Frameworks */,
+				F609D140257CD7520060049C /* RxSwift.framework in Frameworks */,
+				F609D141257CD7520060049C /* RxAlamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +95,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F609D145257CD8B30060049C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F609D146257CD8C10060049C /* MovieList.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		F6298424256E97E400CA23F9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F6298426256E982C00CA23F9 /* DiscoverRouter.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F6298425256E980A00CA23F9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F629842B256EA04600CA23F9 /* DiscoverService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		F6C5AA31254D947700F6B85F = {
 			isa = PBXGroup;
 			children = (
@@ -103,10 +143,12 @@
 		F6C5AA3C254D947800F6B85F /* Moviz */ = {
 			isa = PBXGroup;
 			children = (
+				F609D145257CD8B30060049C /* Entities */,
+				F6298425256E980A00CA23F9 /* Service */,
+				F6298424256E97E400CA23F9 /* Network */,
 				F6C5AA3D254D947800F6B85F /* AppDelegate.swift */,
 				F6C5AA3F254D947800F6B85F /* SceneDelegate.swift */,
 				F6C5AA41254D947800F6B85F /* ViewController.swift */,
-				F6C5AA43254D947800F6B85F /* Main.storyboard */,
 				F6C5AA46254D947B00F6B85F /* Assets.xcassets */,
 				F6C5AA48254D947B00F6B85F /* LaunchScreen.storyboard */,
 				F6C5AA4B254D947B00F6B85F /* Info.plist */,
@@ -135,6 +177,10 @@
 		F6C5AA75254EE47900F6B85F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F609D13D257CD7520060049C /* RxAlamofire.framework */,
+				F609D13B257CD7520060049C /* RxCocoa.framework */,
+				F609D13A257CD7520060049C /* RxRelay.framework */,
+				F609D13C257CD7520060049C /* RxSwift.framework */,
 				F6C5AA76254EE47900F6B85F /* Alamofire.framework */,
 			);
 			name = Frameworks;
@@ -245,7 +291,6 @@
 			files = (
 				F6C5AA4A254D947B00F6B85F /* LaunchScreen.storyboard in Resources */,
 				F6C5AA47254D947B00F6B85F /* Assets.xcassets in Resources */,
-				F6C5AA45254D947800F6B85F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,12 +320,20 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxAlamofire.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxRelay.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxAlamofire.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -293,9 +346,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F609D147257CD8C10060049C /* MovieList.swift in Sources */,
 				F6C5AA42254D947800F6B85F /* ViewController.swift in Sources */,
 				F6C5AA3E254D947800F6B85F /* AppDelegate.swift in Sources */,
+				F629842C256EA04600CA23F9 /* DiscoverService.swift in Sources */,
 				F6C5AA40254D947800F6B85F /* SceneDelegate.swift in Sources */,
+				F6298427256E982C00CA23F9 /* DiscoverRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,14 +387,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F6C5AA43254D947800F6B85F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F6C5AA44254D947800F6B85F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F6C5AA48254D947B00F6B85F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

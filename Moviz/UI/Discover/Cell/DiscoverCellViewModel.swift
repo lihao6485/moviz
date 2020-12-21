@@ -19,6 +19,7 @@ class DiscoverCellViewModel: ViewModelType {
         let bgDataDriver: Driver<Data>
         let title: Driver<String>
         let releaseDate: Driver<String>
+        let popularity: Driver<Double>
     }
     
     private let movie: Movie
@@ -35,6 +36,7 @@ class DiscoverCellViewModel: ViewModelType {
         
         return .init(bgDataDriver: bgDataDriver,
                      title: .just(movie.title),
-                     releaseDate: .just(movie.releaseDate))
+                     releaseDate: .just(movie.releaseDate),
+                     popularity: .just(movie.voteAverage / 2))
     }
 }

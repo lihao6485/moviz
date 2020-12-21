@@ -16,7 +16,7 @@ class DiscoverCell: UITableViewCell, ViewModelBasedType {
     
     var viewModel: ViewModel!
     
-    private let disposeBag = DisposeBag()
+    private var disposeBag = DisposeBag()
     
     private lazy var posterImageView: UIImageView = {
         let imageView = UIImageView()
@@ -61,6 +61,13 @@ class DiscoverCell: UITableViewCell, ViewModelBasedType {
         return gradient
     }()
     
+    private lazy var starStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return stackView
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
       super.init(style: style, reuseIdentifier: reuseIdentifier)
       layout()
@@ -74,9 +81,17 @@ class DiscoverCell: UITableViewCell, ViewModelBasedType {
         super.layoutSubviews()
         labelsViewGradientColor.frame = labelsView.bounds
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        for view in starStackView.arrangedSubviews {
+            starStackView.removeArrangedSubview(view)
+        }
+        disposeBag = DisposeBag()
+    }
 
     private func layout() {
-        [posterImageView, labelsView].forEach(addSubview)
+        [posterImageView, labelsView, starStackView].forEach(addSubview)
         [titleLabel, releaseDateLabel].forEach(labelsView.addSubview)
         
         NSLayoutConstraint.activate([
@@ -89,6 +104,9 @@ class DiscoverCell: UITableViewCell, ViewModelBasedType {
             labelsView.leadingAnchor.constraint(equalTo: leadingAnchor),
             labelsView.trailingAnchor.constraint(equalTo: trailingAnchor),
             labelsView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            
+            starStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
+            starStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
             
             titleLabel.topAnchor.constraint(equalTo: labelsView.topAnchor),
             titleLabel.leadingAnchor.constraint(equalTo: labelsView.leadingAnchor, constant: 8),
@@ -113,8 +131,22 @@ class DiscoverCell: UITableViewCell, ViewModelBasedType {
             .disposed(by: disposeBag)
         
         output.releaseDate
-            .map { "Release Date: \($0)" }
+            .map { "Release - \($0)" }
             .drive(releaseDateLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        output.popularity
+            .drive(onNext: { [weak self] value in
+                let i = Int(value)
+                for _ in 1...i {
+                    self?.starStackView.addArrangedSubview(UIImageView(image: UIImage(systemName: "star.fill")?.withTintColor(.yellow, renderingMode: .alwaysOriginal)))
+                }
+                
+                let d = value - Double(i)
+                if d > 0.4 {
+                    self?.starStackView.addArrangedSubview(UIImageView(image: UIImage(systemName: "star.leadinghalf.fill")?.withTintColor(.yellow, renderingMode: .alwaysOriginal)))
+                }
+            })
             .disposed(by: disposeBag)
     }
 }

@@ -47,7 +47,9 @@ class DiscoverViewController: UIViewController, ViewModelBasedType {
     }
     
     private func bind() {
-        let output = viewModel.transform(input: .init())
+        let output = viewModel.transform(input: .init(
+                                            didSelectMovieObservable: tableView.rx.modelSelected(Movie.self).asObservable()
+        ))
         
         output.moviesDriver
             .drive(tableView.rx.items(cellIdentifier: DiscoverCell.reuseIdentifier)) { row, model, cell in
@@ -58,6 +60,15 @@ class DiscoverViewController: UIViewController, ViewModelBasedType {
                 let vm = DiscoverCellViewModel(movie: model)
                 discoverCell.bind(viewModel: vm)
             }
+            .disposed(by: disposeBag)
+        
+        output.didSelectMovieDriver
+            .drive(onNext: { [weak self] movie in
+                let vm = MovieViewModel(movie: movie)
+                let vc = MovieViewController.instantiate(viewModel: vm)
+                
+                self?.navigationController?.pushViewController(vc, animated: true)
+            })
             .disposed(by: disposeBag)
     }
 }

@@ -11,11 +11,12 @@ import RxCocoa
 
 class DiscoverViewModel: ViewModelType {
     struct Input {
-        
+        let didSelectMovieObservable: Observable<Movie>
     }
     
     struct Output {
         let moviesDriver: Driver<[Movie]>
+        let didSelectMovieDriver: Driver<Movie>
     }
     
     let service = DiscoverService()
@@ -24,7 +25,12 @@ class DiscoverViewModel: ViewModelType {
         let moviesDriver = service.movie()
             .map { $0.results }
             .asDriver(onErrorDriveWith: .empty())
+        
+        let didSelectMovieDriver = input.didSelectMovieObservable
+            .asDriver(onErrorDriveWith: .empty())
             
-        return .init(moviesDriver: moviesDriver)
+        return .init(
+            moviesDriver: moviesDriver,
+            didSelectMovieDriver: didSelectMovieDriver)
     }
 }

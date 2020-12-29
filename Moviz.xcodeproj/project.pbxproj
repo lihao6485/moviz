@@ -16,6 +16,8 @@
 		A07C8D792586574300135B84 /* DiscoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C8D782586574300135B84 /* DiscoverViewModel.swift */; };
 		A07C8D822586584400135B84 /* BaseProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C8D812586584400135B84 /* BaseProtocols.swift */; };
 		A0C9239325865FE000BF970F /* DiscoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C9239225865FE000BF970F /* DiscoverCell.swift */; };
+		A0E5D4442590E397004162C1 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E5D4432590E397004162C1 /* MovieViewController.swift */; };
+		A0E5D44C2590E632004162C1 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E5D44B2590E632004162C1 /* MovieViewModel.swift */; };
 		F609D147257CD8C10060049C /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F609D146257CD8C10060049C /* MovieList.swift */; };
 		F6298427256E982C00CA23F9 /* DiscoverRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6298426256E982C00CA23F9 /* DiscoverRouter.swift */; };
 		F629842C256EA04600CA23F9 /* DiscoverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F629842B256EA04600CA23F9 /* DiscoverService.swift */; };
@@ -50,6 +52,8 @@
 		A07C8D782586574300135B84 /* DiscoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewModel.swift; sourceTree = "<group>"; };
 		A07C8D812586584400135B84 /* BaseProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseProtocols.swift; sourceTree = "<group>"; };
 		A0C9239225865FE000BF970F /* DiscoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCell.swift; sourceTree = "<group>"; };
+		A0E5D4432590E397004162C1 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		A0E5D44B2590E632004162C1 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		F609D13A257CD7520060049C /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		F609D13B257CD7520060049C /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		F609D13C257CD7520060049C /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 		A07C8D732586512900135B84 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A0E5D4422590E385004162C1 /* Movie */,
 				A07C8D802586583200135B84 /* Protocols */,
 				F6C5AA46254D947B00F6B85F /* Assets.xcassets */,
 				A07C8D772586515800135B84 /* Discover */,
@@ -138,6 +143,15 @@
 				A04482A22587AA5E000DA58F /* DiscoverCellViewModel.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		A0E5D4422590E385004162C1 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				A0E5D4432590E397004162C1 /* MovieViewController.swift */,
+				A0E5D44B2590E632004162C1 /* MovieViewModel.swift */,
+			);
+			path = Movie;
 			sourceTree = "<group>";
 		};
 		F609D145257CD8B30060049C /* Entities */ = {
@@ -372,6 +386,7 @@
 			files = (
 				F609D147257CD8C10060049C /* MovieList.swift in Sources */,
 				F6C5AA42254D947800F6B85F /* DiscoverViewController.swift in Sources */,
+				A0E5D4442590E397004162C1 /* MovieViewController.swift in Sources */,
 				F6C5AA3E254D947800F6B85F /* AppDelegate.swift in Sources */,
 				A07C8D792586574300135B84 /* DiscoverViewModel.swift in Sources */,
 				A0C9239325865FE000BF970F /* DiscoverCell.swift in Sources */,
@@ -380,6 +395,7 @@
 				F6C5AA40254D947800F6B85F /* SceneDelegate.swift in Sources */,
 				A07C8D822586584400135B84 /* BaseProtocols.swift in Sources */,
 				F6298427256E982C00CA23F9 /* DiscoverRouter.swift in Sources */,
+				A0E5D44C2590E632004162C1 /* MovieViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

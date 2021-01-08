@@ -32,6 +32,7 @@ class DiscoverCellViewModel: ViewModelType {
         let bgDataDriver = RxAlamofire.requestData(.get, "https://image.tmdb.org/t/p/w500/\(movie.backdropPath)")
             .map { $0.1 }
             .asDriver(onErrorDriveWith: .empty())
+            .debug()
         
         
         return .init(bgDataDriver: bgDataDriver,

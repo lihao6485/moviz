@@ -14,7 +14,7 @@ class DiscoverViewController: UIViewController, ViewModelBasedType {
     
     var viewModel: DiscoverViewModel!
     
-    private lazy var tableView: UITableView = {
+    lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.rowHeight = 220

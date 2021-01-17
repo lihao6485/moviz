@@ -69,3 +69,7 @@ fastlane/test_output
 
 Resources/Configurations/**/*.plist
 /gc_keys.json
+
+#snapshot files
+MovizTests/__Snapshots__
+__Snapshots__.zip

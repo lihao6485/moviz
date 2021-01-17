@@ -19,5 +19,6 @@ final class DiscoverService {
         RxAlamofire.requestDecodable(DiscoverRouter.movie)
             .asSingle()
             .map { $0.1 }
+            .debug()
     }
 }

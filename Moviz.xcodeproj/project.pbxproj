@@ -21,6 +21,9 @@
 		A07C8D6C25864D9200135B84 /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A07C8D6B25864D9200135B84 /* RxAlamofire */; };
 		A07C8D792586574300135B84 /* DiscoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C8D782586574300135B84 /* DiscoverViewModel.swift */; };
 		A07C8D822586584400135B84 /* BaseProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C8D812586584400135B84 /* BaseProtocols.swift */; };
+		A07FAF6325D7DA2C009FFF27 /* Cucumberish in Frameworks */ = {isa = PBXBuildFile; productRef = A07FAF6225D7DA2C009FFF27 /* Cucumberish */; };
+		A07FAF6925D7DA64009FFF27 /* MovizCucumberish.m in Sources */ = {isa = PBXBuildFile; fileRef = A07FAF6825D7DA64009FFF27 /* MovizCucumberish.m */; };
+		A07FAF6E25D7DDDF009FFF27 /* Features in Resources */ = {isa = PBXBuildFile; fileRef = A07FAF6D25D7DDDF009FFF27 /* Features */; };
 		A0C9239325865FE000BF970F /* DiscoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C9239225865FE000BF970F /* DiscoverCell.swift */; };
 		A0E5D4442590E397004162C1 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E5D4432590E397004162C1 /* MovieViewController.swift */; };
 		A0E5D44C2590E632004162C1 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E5D44B2590E632004162C1 /* MovieViewModel.swift */; };
@@ -60,6 +63,9 @@
 		A04482A22587AA5E000DA58F /* DiscoverCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCellViewModel.swift; sourceTree = "<group>"; };
 		A07C8D782586574300135B84 /* DiscoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewModel.swift; sourceTree = "<group>"; };
 		A07C8D812586584400135B84 /* BaseProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseProtocols.swift; sourceTree = "<group>"; };
+		A07FAF6725D7DA63009FFF27 /* MovizUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MovizUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		A07FAF6825D7DA64009FFF27 /* MovizCucumberish.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovizCucumberish.m; sourceTree = "<group>"; };
+		A07FAF6D25D7DDDF009FFF27 /* Features */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Features; sourceTree = "<group>"; };
 		A0C9239225865FE000BF970F /* DiscoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCell.swift; sourceTree = "<group>"; };
 		A0E5D4432590E397004162C1 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		A0E5D44B2590E632004162C1 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
@@ -113,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A07FAF6325D7DA2C009FFF27 /* Cucumberish in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +209,7 @@
 		F6C5AA31254D947700F6B85F = {
 			isa = PBXGroup;
 			children = (
+				A07FAF6D25D7DDDF009FFF27 /* Features */,
 				F6C5AA3C254D947800F6B85F /* Moviz */,
 				F6C5AA53254D947C00F6B85F /* MovizTests */,
 				F6C5AA5E254D947C00F6B85F /* MovizUITests */,
@@ -251,6 +259,8 @@
 			children = (
 				F6C5AA5F254D947C00F6B85F /* MovizUITests.swift */,
 				F6C5AA61254D947C00F6B85F /* Info.plist */,
+				A07FAF6825D7DA64009FFF27 /* MovizCucumberish.m */,
+				A07FAF6725D7DA63009FFF27 /* MovizUITests-Bridging-Header.h */,
 			);
 			path = MovizUITests;
 			sourceTree = "<group>";
@@ -331,6 +341,9 @@
 				F6C5AA5D254D947C00F6B85F /* PBXTargetDependency */,
 			);
 			name = MovizUITests;
+			packageProductDependencies = (
+				A07FAF6225D7DA2C009FFF27 /* Cucumberish */,
+			);
 			productName = MovizUITests;
 			productReference = F6C5AA5B254D947C00F6B85F /* MovizUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -353,6 +366,7 @@
 					};
 					F6C5AA5A254D947C00F6B85F = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1240;
 						TestTargetID = F6C5AA39254D947800F6B85F;
 					};
 				};
@@ -372,6 +386,7 @@
 				A07C8D6A25864D9200135B84 /* XCRemoteSwiftPackageReference "RxAlamofire" */,
 				A02B0B20259EC91700820971 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 				A02B0C8025A2FCF100820971 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */,
+				A07FAF6125D7DA2C009FFF27 /* XCRemoteSwiftPackageReference "Cucumberish" */,
 			);
 			productRefGroup = F6C5AA3B254D947800F6B85F /* Products */;
 			projectDirPath = "";
@@ -407,6 +422,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A07FAF6E25D7DDDF009FFF27 /* Features in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A07FAF6925D7DA64009FFF27 /* MovizCucumberish.m in Sources */,
 				F6C5AA60254D947C00F6B85F /* MovizUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -686,6 +703,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R737Q59B7G;
 				INFOPLIST_FILE = MovizUITests/Info.plist;
@@ -696,6 +714,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Pointwelve.MovizUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MovizUITests/MovizUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Moviz;
@@ -706,6 +726,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R737Q59B7G;
 				INFOPLIST_FILE = MovizUITests/Info.plist;
@@ -716,6 +737,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Pointwelve.MovizUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MovizUITests/MovizUITests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Moviz;
@@ -804,6 +826,14 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		A07FAF6125D7DA2C009FFF27 /* XCRemoteSwiftPackageReference "Cucumberish" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Ahmed-Ali/Cucumberish.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -846,6 +876,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A07C8D6A25864D9200135B84 /* XCRemoteSwiftPackageReference "RxAlamofire" */;
 			productName = RxAlamofire;
+		};
+		A07FAF6225D7DA2C009FFF27 /* Cucumberish */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A07FAF6125D7DA2C009FFF27 /* XCRemoteSwiftPackageReference "Cucumberish" */;
+			productName = Cucumberish;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

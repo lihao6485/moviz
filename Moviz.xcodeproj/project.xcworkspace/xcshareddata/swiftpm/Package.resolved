@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "Cucumberish",
+        "repositoryURL": "https://github.com/Ahmed-Ali/Cucumberish.git",
+        "state": {
+          "branch": "develop",
+          "revision": "10928101eb1884326b521de713542ddfa5fa47f6",
+          "version": null
+        }
+      },
+      {
         "package": "OHHTTPStubs",
         "repositoryURL": "https://github.com/AliSoftware/OHHTTPStubs",
         "state": {

@@ -7,6 +7,7 @@
 
 @testable import Moviz
 import OHHTTPStubs
+import OHHTTPStubsSwift
 import SnapshotTesting
 import XCTest
 
